@@ -63,6 +63,19 @@
 		}		
 	}
 
+//封装 getElementsByClassName
+	function getByClass(oParent,sClass){
+		var result = [];
+		var aEle = oParent.getElementsByTagName("*")   //元素无法确认，因此用*表示
+		for(var i=0;i<aEle.length;i++){
+			if(aEle[i].className ==sClass){
+				result.push(aEle[i])
+			}
+		}
+		return result
+	}
+
+
 	//封装 设置cookie
 	function setcookie(name,value,iday){
 		var oDate = new Date();
